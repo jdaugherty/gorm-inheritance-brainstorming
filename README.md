@@ -1,7 +1,13 @@
 Prior to Groovy 4, an interface could be implemented with multiple generic types.  Given a class `Parent` and a class `Child`, this is allowed: 
 
-`Parent extends GormEntity<Parent>`
-`Child extends GormEntity<Child>`
+	class Parent extends GormEntity<Parent>
+
+
+and: 
+
+ 
+	class Child extends GormEntity<Child>
+ 
 
 In groovy 4, this fails with: 
 
