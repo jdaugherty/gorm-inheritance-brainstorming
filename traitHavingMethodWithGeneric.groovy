@@ -2,7 +2,7 @@ import groovy.transform.CompileStatic
 
 @CompileStatic
 trait GormEntity<D> {
-  static <T extends D> T getAll() {
+  static <T extends D> T getAll() { // Does not allow Child.getAll() to return either Parent or Child even though both Child & Parent implement `D = Parent`
     null
   }
 }
